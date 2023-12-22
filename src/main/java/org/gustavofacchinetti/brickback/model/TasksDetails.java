@@ -1,14 +1,15 @@
 package org.gustavofacchinetti.brickback.model;
 
-import jakarta.persistence.Lob;
-
-import java.util.Arrays;
-
-public class TaskPostRequest {
+public class TasksDetails {
     private String title;
     private String description;
-//    @Lob
-//    private byte[] image;
+
+    public TasksDetails() {}
+
+    public TasksDetails(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 
     public String getTitle() {
         return title;
@@ -26,20 +27,15 @@ public class TaskPostRequest {
         this.description = description;
     }
 
-//    public byte[] getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(byte[] image) {
-//        this.image = image;
-//    }
-
     @Override
     public String toString() {
-        return "TaskPostRequest{" +
+        return "TaskDetails{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-//                ", image=" + Arrays.toString(image) +
                 '}';
     }
+
+
+
+
 }
