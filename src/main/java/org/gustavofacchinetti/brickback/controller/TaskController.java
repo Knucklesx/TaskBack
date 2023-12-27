@@ -1,4 +1,5 @@
 package org.gustavofacchinetti.brickback.controller;
+
 import org.gustavofacchinetti.brickback.model.TaskPostRequest;
 import org.gustavofacchinetti.brickback.model.TaskPostResponse;
 import org.gustavofacchinetti.brickback.model.TasksDetails;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/tasks")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TaskController {
 
     @Autowired
@@ -25,7 +27,7 @@ public class TaskController {
 
     @GetMapping
     public List<TasksDetails> getTasks() {
-       return taskService.fetchAll();
+        return taskService.fetchAll();
     }
 
 }

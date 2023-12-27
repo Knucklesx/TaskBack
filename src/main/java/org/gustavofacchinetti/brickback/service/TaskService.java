@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 @Service
 public class TaskService {
 
+
     @Autowired
     private TaskRepository taskRepository;
     public int addAll(List<TaskPostRequest> taskPostRequest) {

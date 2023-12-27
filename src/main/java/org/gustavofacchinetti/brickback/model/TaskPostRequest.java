@@ -7,8 +7,16 @@ import java.util.Arrays;
 public class TaskPostRequest {
     private String title;
     private String description;
-//    @Lob
-//    private byte[] image;
+    private byte[] image;
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
 
     public String getTitle() {
         return title;
@@ -26,13 +34,6 @@ public class TaskPostRequest {
         this.description = description;
     }
 
-//    public byte[] getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(byte[] image) {
-//        this.image = image;
-//    }
 
     @Override
     public String toString() {
